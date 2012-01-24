@@ -1,0 +1,6 @@
+<?foreach($feed_content as $content):?>
+<div class='tweet'>
+<?$text = preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '<a href="$1">$1</a>', $content['text']);?>
+<p class='tweet_content'>"<?=$text?>"</p>
+</div>
+<?endforeach?>

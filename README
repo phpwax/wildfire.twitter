@@ -1,0 +1,9 @@
+REQUIRES WAXBACKGROUNDCURL
+
+* Expects a twitter username in Config/twitter/username
+
+SETUP:
+* login to twitter as the user you want to use
+* go to http://twitter.oneblackbear.com/USERNAME/twitter_auth.html
+* accept the auth
+* you can use this plugin

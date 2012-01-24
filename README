@@ -7,3 +7,8 @@ SETUP:
 * go to http://twitter.oneblackbear.com/USERNAME/twitter_auth.html
 * accept the auth
 * you can use this plugin
+
+
+USE:
+
+<?=partial("twitter/__twitter");?>

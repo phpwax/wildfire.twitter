@@ -1,6 +1,8 @@
+<?if(!$date_format) $date_format = "j F Y @ H:i";?>
+
 <?foreach($tweets as $content):?>
 <div class='tweet'>
 <?$text = preg_replace('@(https?://([-\w\.]+)+(:\d+)?(/([\w/_\.]*(\?\S+)?)?)?)@', '<a href="$1">$1</a>', $content['text']);?>
-<p class='tweet_content'>"<?=$text?>"</p>
+<p class='tweet_content'>"<?=$text?>"<?if($show_created_at):?><span class='when'><?=date($date_format, strtotime($content['created_at']))?></span><?endif?></p>
 </div>
 <?endforeach?>

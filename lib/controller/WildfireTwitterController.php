@@ -9,7 +9,7 @@ class WildfireTwitterController extends WaxController{
     }
 
     public function __user_info(){
-      $twitter = new WaxBackgroundCurl(array("url"=>"obbtwitter.dev/".Config::get("twitter/username")."/user_info.sphp","cache"=>false));
+      $twitter = new WaxBackgroundCurl(array("url"=>"http://twitter.oneblackbear.com/".Config::get("twitter/username")."/user_info.sphp","cache"=>false));
       $this->user_info = unserialize($twitter->fetch());
     }
 }

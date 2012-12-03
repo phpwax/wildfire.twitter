@@ -8,5 +8,9 @@ class WildfireTwitterController extends WaxController{
       $this->tweets = array_slice((array)unserialize($twitter->fetch()), 0, $this->number_of_tweets);
     }
 
+    public function __user_info(){
+      $twitter = new WaxBackgroundCurl(array("url"=>"obbtwitter.dev/".Config::get("twitter/username")."/user_info.sphp","cache"=>false));
+      $this->user_info = unserialize($twitter->fetch());
+    }
 }
 ?>
